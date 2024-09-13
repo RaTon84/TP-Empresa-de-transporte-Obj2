@@ -5,11 +5,11 @@ import org.junit.Test;
 
 public class CamionTest {
 
-    Camion camion = new Camion();
-    String ciudad1 = "Buenos Aires";
-    String ciudad2 = "Mar del Plata";
-    Destino destino = new Destino("Rosario", "Avellaneda 111");
-    Paquete paquete = new Paquete(50.0,50.0,20.0,15_000,destino);
+    private Camion camion = new Camion();
+    private String ciudad1 = "Buenos Aires";
+    private String ciudad2 = "Mar del Plata";
+    private Destino destino = new Destino("Rosario", "Avellaneda 111");
+    private Paquete paquete = new Paquete(50.0,50.0,20.0,15_000,destino);
 
     @Test
     public void crearCamion() {

@@ -27,6 +27,8 @@ public abstract class Transporte {
     public void aniadirPaquete(Paquete paquete) {
         if (puedeLlevar(paquete)) {
             paquetes.add(paquete);
+        }else {
+            throw new RuntimeException("No se pudo agregar el paquete");
         }
     }
 

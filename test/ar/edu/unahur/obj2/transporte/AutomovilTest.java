@@ -5,13 +5,13 @@ import static org.junit.Assert.*;
 
 public class AutomovilTest {
 
-    Automovil automovil = new Automovil("Rosario");
-    String buenosAires = "Buenos Aires";
-    String marDelPlata = "Mar del Plata";
-    Destino destino = new Destino("Rosario", "Avellaneda 111");
-    Paquete paquete = new Paquete(50.0,50.0,20.0,15,destino);
-    Destino destino2 = new Destino("Buenos Aires", "Avellaneda 111");
-    Paquete paquete2 = new Paquete(70.0,60.0,30.0,30,destino);
+    private Automovil automovil = new Automovil("Rosario");
+    private String buenosAires = "Buenos Aires";
+    private String marDelPlata = "Mar del Plata";
+    private Destino destino = new Destino("Rosario", "Avellaneda 111");
+    private Paquete paquete = new Paquete(50.0,50.0,20.0,15,destino);
+    private Destino destino2 = new Destino("Buenos Aires", "Avellaneda 111");
+    private Paquete paquete2 = new Paquete(70.0,60.0,30.0,30,destino);
 
     @Test
     public void crearAutomovilCon3Ciudades() {

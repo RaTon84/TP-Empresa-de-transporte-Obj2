@@ -5,9 +5,9 @@ import org.junit.Test;
 
 public class BicicletaTest {
 
-    Bicicleta bici = new Bicicleta("Buenos Aires");
-    Destino destino = new Destino("Buenos Aires", "Avellaneda 111");
-    Paquete paquete = new Paquete(50.0,50.0,20.0,15,destino);
+    private Bicicleta bici = new Bicicleta("Buenos Aires");
+    private Destino destino = new Destino("Buenos Aires", "Avellaneda 111");
+    private Paquete paquete = new Paquete(50.0,50.0,20.0,15,destino);
 
     @Test
     public void crearBicicleta(){

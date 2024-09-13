@@ -8,12 +8,12 @@ import static org.junit.Assert.*;
 
 public class PaqueteTest {
 
-    Double alto = 50.0;
-    Double ancho = 50.0;
-    Double profundidad = 20.0;
-    Integer peso = 8;
-    Destino destino = new Destino("Buenos Aires", "Avellaneda 111");
-    Paquete paquete = new Paquete(alto,ancho,profundidad,peso,destino);
+    private Double alto = 50.0;
+    private Double ancho = 50.0;
+    private Double profundidad = 20.0;
+    private Integer peso = 8;
+    private Destino destino = new Destino("Buenos Aires", "Avellaneda 111");
+    private Paquete paquete = new Paquete(alto,ancho,profundidad,peso,destino);
 
     @Test
     public void volumenDePaquete() {

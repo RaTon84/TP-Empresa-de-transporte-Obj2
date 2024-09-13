@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Bicicleta extends Transporte{
 
     private String ciudad;
-    //private ArrayList<Paquete> paquetes = new ArrayList<Paquete>();
     private Destino destino = null;
 
     public Bicicleta(String ciudad) {
@@ -30,6 +29,8 @@ public class Bicicleta extends Transporte{
         if (puedeLlevar(paquete)) {
             this.paquetes.add(paquete);
             this.destino = paquete.getDestino();
+        }else {
+            throw new RuntimeException("No se pudo agregar el paquete");
         }
     }
 
