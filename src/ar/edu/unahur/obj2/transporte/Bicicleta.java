@@ -2,11 +2,11 @@ package ar.edu.unahur.obj2.transporte;
 
 import java.util.ArrayList;
 
-public class Bicicleta {
+public class Bicicleta extends Transporte{
 
     private String ciudad;
-    private ArrayList<Paquete> paquetes = new ArrayList<Paquete>();
-    private String destino = null;
+    //private ArrayList<Paquete> paquetes = new ArrayList<Paquete>();
+    private Destino destino = null;
 
     public Bicicleta(String ciudad) {
         this.ciudad = ciudad;
@@ -16,36 +16,24 @@ public class Bicicleta {
         return ciudad;
     }
 
+    @Override
     public Boolean puedeLlevar(Paquete paquete) {
         //this.paquetes.add(paquete);
-        return this.paquetes.size() < 2 && getVolumenPaquetes() + paquete.volumen() < 0.125 && getPesoPaquetes() + paquete.getPeso() <= 15;
+        return this.ciudad.equals(paquete.getCiudad())
+                && this.paquetes.size() < 2
+                && getVolumenPaquetes() + paquete.volumen() <= 0.125
+                && getPesoPaquetes() + paquete.getPeso() <= 15;
     }
 
-    public Integer getPesoPaquetes() {
-        Integer total = 0;
-        for (Paquete paquete : this.paquetes) {
-            total += paquete.getPeso();
-        }
-        return total;
-    }
-
-    public Double getVolumenPaquetes() {
-        Double total = 0.0;
-        for (Paquete paquete : paquetes) {
-            total += paquete.volumen();
-        }
-        return total;
-    }
-
-
-    public void añadirPaquete(Paquete paquete) {
+    @Override
+    public void aniadirPaquete(Paquete paquete) {
         if (puedeLlevar(paquete)) {
-            paquetes.add(paquete);
+            this.paquetes.add(paquete);
             this.destino = paquete.getDestino();
         }
     }
 
-    public String getDestino() {
+    public Destino getDestino() {
         return destino;
     }
 }

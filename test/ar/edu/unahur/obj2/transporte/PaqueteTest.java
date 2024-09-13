@@ -8,29 +8,26 @@ import static org.junit.Assert.*;
 
 public class PaqueteTest {
 
-    Double alto = 2.0;
-    Double ancho = 2.0;
-    Double profundidad = 2.0;
+    Double alto = 50.0;
+    Double ancho = 50.0;
+    Double profundidad = 20.0;
     Integer peso = 8;
-    String destino = "Buneos Aires";
+    Destino destino = new Destino("Buenos Aires", "Avellaneda 111");
     Paquete paquete = new Paquete(alto,ancho,profundidad,peso,destino);
 
     @Test
     public void volumenDePaquete() {
         Double valorObtenido = paquete.volumen();
-        Integer valorEsperado = 8;
-        assertEquals(valorEsperado,valorObtenido);
+        assertEquals(0.05,valorObtenido.doubleValue(),0.001);
     }
     @Test
     public void pesoDePaquete() {
         Integer valorObtenido = paquete.getPeso();
-        Integer valorEsperado = 8;
-        assertEquals(valorEsperado,valorObtenido);
+        assertEquals(8,valorObtenido.intValue());
     }
     @Test
     public void pesoDePdaquete() {
         Integer valorObtenido = paquete.getPeso();
-        Integer valorEsperado = 8;
-        assertEquals(valorEsperado,valorObtenido);
+        assertEquals(8,valorObtenido.intValue());
     }
 }
